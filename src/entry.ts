@@ -1,7 +1,8 @@
 import server from './server';
+import dotenv from 'dotenv';
 
-const PORT = 3000;
+dotenv.config();
 
-server.listen(PORT, () => {
-  console.log(`Running at http://localhost:${PORT}`);
+server.listen(process.env.PORT, () => {
+  console.log(`Running at http://localhost:${process.env.PORT}`);
 });
